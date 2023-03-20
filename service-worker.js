@@ -9,15 +9,15 @@ self.addEventListener('install', event => {
       .then(cache => cache.addAll([
 
         './index.html',
+        './sobre.html',
+        './menu.html',
+        './chefs.html',
+        './sample-inner-page.html',
 
         './assets/img/favicon.png',
         './assets/img/apple-touch-icon.png',
+        './assets/js/main.js',
 
-        './assets/vendor/bootstrap/css/bootstrap.min.css',
-        './assets/vendor/bootstrap-icons/bootstrap-icons.css',
-        './assets/vendor/aos/aos.css',
-        './assets/vendor/glightbox/css/glightbox.min.css',
-        './assets/vendor/swiper/swiper-bundle.min.css',
 
         './assets/css/main.css',
         './assets/img/hero-img.png',
@@ -32,14 +32,7 @@ self.addEventListener('install', event => {
         './assets/img/chefs/chefs-2.jpg',
         './assets/img/chefs/chefs-3.jpg',
         
-
-
-        './assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
-        './assets/vendor/aos/aos.js',
-        './assets/vendor/glightbox/js/glightbox.min.js',
-        './assets/vendor/purecounter/purecounter_vanilla.js',
-        './assets/vendor/swiper/swiper-bundle.min.js',
-        './assets/vendor/php-email-form/validate.js'
+        './assets/vendor/bootstrap/css/bootstrap.min.css'
       ]))
   );
 });

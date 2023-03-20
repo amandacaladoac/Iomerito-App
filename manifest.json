@@ -1,6 +1,11 @@
 {
-  "name": "iomerito-app",
-  "short_name": "iomerito app",
+  "name": "Iomerito",
+  "short_name": "Iomerito-app",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fdfdfd",
+  "theme_color": "#db4938",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "assets/img/icons/16.png",
@@ -30,8 +35,7 @@
     {
       "src": "assets/img/icons/50.png",
       "sizes": "50x50",
-      "type": "image/png",
-	  "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "assets/img/icons/57.png",
@@ -129,13 +133,15 @@
       "type": "image/png"
     },
     {
-      "src": "assets/img/icons/1026.png",
-      "sizes": "1026x1026",
+      "src": "assets/img/icons/1024.png",
+      "sizes": "1024x1024",
       "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icons/maskable_icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ],
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#31506F",
-  "theme_color": "#4D5360"
+  ]
 }

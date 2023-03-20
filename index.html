@@ -34,6 +34,19 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <link rel="manifest" href="manifest.json" />
+<!-- ios support -->
+<link rel="apple-touch-icon" href="\assets\img\icons\72.png" />
+<link rel="apple-touch-icon" href="\assets\img\icons\87.png" />
+<link rel="apple-touch-icon" href="\assets\img\icons\128.png" />
+<link rel="apple-touch-icon" href="\assets\img\icons\144.png" />
+<link rel="apple-touch-icon" href="\assets\img\icons\152.png" />
+<link rel="apple-touch-icon" href="\assets\img\icons\180.png" />
+<link rel="apple-touch-icon" href="\assets\img\icons\256.png" />
+<link rel="apple-touch-icon" href="\assets\img\icons\512.png" />
+<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+<meta name="theme-color" content="#db4938" />
 </head>
 
 <body>
@@ -246,6 +259,35 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    let newWorker;
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(reg => {
+        reg.addEventListener('updatefound', () => {
+          // A wild service worker has appeared in reg.installing!
+          newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            // Has network.state changed?
+            switch (newWorker.state) {
+              case 'installed':
+                if (navigator.serviceWorker.controller) {
+                  // new update available
+                }
+                // No update available
+                break;
+            }
+          });
+        });
+      });
+      let refreshing;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (refreshing) return;
+        window.location.reload();
+        refreshing = true;
+      });
+    }
+  </script>
 
 </body>
 
