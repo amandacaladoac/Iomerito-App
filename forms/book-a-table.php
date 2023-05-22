@@ -42,4 +42,5 @@
   $book_a_table->add_message( $_POST['message'], 'Message');
 
   echo $book_a_table->send();
+
 ?>
